@@ -34,7 +34,7 @@ update msg model =
         Ok newGuess ->
           { model | guess = Just newGuess }
         _ ->
-          model
+          { model | guess = Nothing }
 
     Reset ->
       let
